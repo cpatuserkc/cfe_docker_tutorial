@@ -1,0 +1,12 @@
+FROM python:3.9.4-slim
+
+COPY . /app
+WORKDIR /app
+
+RUN pip install pip --upgrade
+#entire dir copied over so requirements should be copied
+RUN pip install -r requirements.txt
+# cmd to turn the file to an exe...
+RUN chmod +x run.sh
+
+CMD ["./run.sh"]

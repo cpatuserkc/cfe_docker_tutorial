@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  #can name them anything you want
+  web:
+    build:
+      context: ./pyapp
+      dockerfile: Dockerfile.py-app
+    ports:
+      - 8081:8000
