@@ -1,3 +1,8 @@
+# git repo
+- to see repo url
+    CMD: git remote -v
+
+
 # ON MAIN branch
 - to see all branches
     CMD: git branch
@@ -23,4 +28,7 @@
 - run merge, merge in branch name that you want to merge to current branch
     CMD: git merge BRANCH_NAME
 
-
+# PULL
+- pull 
+    CMD: git pull origin BRANCH_NAME
+    
