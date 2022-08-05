@@ -1,7 +1,8 @@
 # git repo
 - to see repo url
     CMD: git remote -v
-
+-clone a repo
+    CMD: git clone REPO_URL
 
 # ON MAIN branch
 - to see all branches
@@ -31,4 +32,5 @@
 # PULL
 - pull 
     CMD: git pull origin BRANCH_NAME
-    
+
+
