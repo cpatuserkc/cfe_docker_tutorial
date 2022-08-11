@@ -1,0 +1,27 @@
+#FROM python:3.9.4-slim
+FROM node:14.16.0-alpine3.13
+
+
+#RUN addgroup app && adduser -S -G app app
+#USER app
+
+WORKDIR /app
+#updated "." copy from location from cwd to local dev src location /c/cpat/Dropbox/dev/react_ui/web/development/my_code_journ_proj/appsrc/parcel
+COPY . /app
+
+RUN pip install pip --upgrade
+#entire dir copied over so requirements should be copied
+RUN pip install -r requirements.txt
+# cmd to turn the file to an exe...
+RUN chmod +x run.sh
+
+CMD ["./run.sh"]
+
+
+COPY package*.json ./
+RUN npm install
+COPY . .
+
+EXPOSE 3000 
+
+CMD ["npm", "start"]
