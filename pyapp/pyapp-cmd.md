@@ -11,7 +11,7 @@ docker run -p 8080:8000 pyapp-2
 
 # RUN cmd ALT PORT/PROXY
 '''
-docker run -p 8080:8000 pyapp-2
+docker run -p 8084:8000 pyapp-2
 '''
 
 # RUN script
