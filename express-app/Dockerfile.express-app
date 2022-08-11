@@ -1,0 +1,18 @@
+#FROM python:3.9.4-slim
+FROM node:lts-slim
+
+
+#COPY THEN DESIGNATE WD
+COPY . /app
+WORKDIR /app
+
+#will install from package.json
+RUN npm install
+
+
+#--------- using the run.sh method
+#run.sh should be in the src dir, so it should be copied over already
+RUN chmod +x run.sh
+
+CMD ["./run.sh"]
+
